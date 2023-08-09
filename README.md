@@ -15,7 +15,7 @@ I'm excited about connecting with Data Science professionals and mentors who hav
 Connect with me and let's embark on this captivating journey of exploration together. 🤝
 
 # Data Science
-Connect with me on LinkedIn: [Yash Mankar](www.linkedin.com/in/yash-mankar-492506283)
+Connect with me on LinkedIn: [Yash Mankar](https://www.linkedin.com/in/yash-mankar-492506283/)
 
 Let's stay curious, question relentlessly, and create a data-driven world! 🚀
 #DataScience #AspiringDataScientist
