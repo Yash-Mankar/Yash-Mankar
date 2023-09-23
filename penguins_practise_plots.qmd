@@ -1,0 +1,98 @@
+---
+title: "Penguins"
+author: "Yash"
+format: html
+editor: visual
+---
+
+```{r}
+library(tidyverse)
+library(palmerpenguins)
+```
+
+## Summary
+
+The `palmerpenguins` data contains size measurements for three penguin species observed on three islands in the Palmer Archipelago, Antarctica. Here are the summary of penguins dataset.
+
+```{r}
+summary(penguins)
+```
+
+```{r}
+glimpse(penguins)
+```
+
+```{r}
+view(penguins)
+```
+
+## Data Visualization
+
+#### 1
+
+```{r}
+ggplot(data = penguins, mapping = aes(x = species)) +geom_bar()
+```
+
+#### 2
+
+```{r}
+ggplot(data = penguins, mapping = aes(x = island, fill = species ))+geom_bar()
+```
+
+#### 3
+
+```{r}
+ggplot(data = penguins, mapping = aes(x = body_mass_g))+geom_histogram()
+```
+
+#### 4
+
+```{r}
+ggplot(penguins, aes(x = body_mass_g, fill = species)) +
+  geom_density(alpha = 0.5)
+
+```
+
+#### 5
+
+```{r}
+ggplot(data = penguins, 
+   mapping = aes(x = bill_length_mm, y = bill_depth_mm, color = species))+
+   geom_point()
+```
+
+#### 6
+
+```{r}
+ggplot(data = penguins, 
+   mapping = aes(y = body_mass_g, x = flipper_length_mm, color = species, shape = island))+
+   geom_point()
+```
+
+#### 7
+
+```{r}
+ggplot(data = penguins, 
+   mapping = aes(y = body_mass_g, x = flipper_length_mm))+
+   geom_point(aes(color = species, shape = island))+
+facet_wrap(~island)
+```
+
+#### 8
+
+```{r}
+ggplot(data = penguins, 
+   mapping = aes(y = body_mass_g, x = flipper_length_mm, color = species, shape = island))+
+   geom_point()+
+  geom_smooth(method = 'lm')
+```
+
+#### 9
+
+```{r}
+ggplot(data = penguins, 
+ mapping = aes(y = body_mass_g, x = flipper_length_mm ))+
+   geom_point(aes(color = species, shape = species))+
+  geom_smooth(method = 'lm')
+```
